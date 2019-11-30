@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "keywords": [],
+  "author": "afeiship",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-banner": "github:afeiship/gulp-banner",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-util": "^3.0.8"
+  }
+}
