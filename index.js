@@ -3,7 +3,7 @@
 var through = require('through2');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
-var PLUGIN_NAME = 'gulp-plugin';
+var PLUGIN_NAME = 'boilerplate-gulp-plugin';
 
 function Plugin(inString) {
   if (!inString) {
