@@ -2,7 +2,7 @@
   "name": "boilerplate-gulp-plugin",
   "version": "1.0.0",
   "description": "boilerplate-gulp-plugin-description",
-  "homepage": "https://github.com/afeiship/boilerplate-gulp-plugin",
+  "homepage": "https://js.work",
   "author": {
     "name": "afeiship",
     "email": "1290657123@qq.com"
@@ -18,5 +18,10 @@
     "gulp-util": "^3.0.8",
     "mocha": "^6.2.2",
     "through2": "^3.0.1"
+  },
+  "boilerplate": "boilerplate-gulp-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afeiship/boilerplate-gulp-plugin"
   }
 }
