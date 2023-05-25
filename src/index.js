@@ -23,6 +23,7 @@ import '@jswork/next-param';
 import '@jswork/next-qs';
 import '@jswork/next-sets';
 import '@jswork/next-json';
+import '@jswork/next-global';
 
 const defaults = { prefix: 'nuk', initialData: null };
 
