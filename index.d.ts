@@ -1,3 +1,10 @@
+interface Options {
+  prefix: string;
+  initialData: any;
+}
+
 interface NxStatic {
-  UniappKits: any;
+  UniappKits: {
+    create: (options: Options) => any;
+  };
 }
