@@ -15,7 +15,8 @@ yarn add @jswork/next-uniapp-kits
 ```js
 import '@jswork/next-uniapp-kits';
 
-//DOCS here!
+// init uniapp kits:
+nx.UniappKits.create({ prefix: 'nuk' });
 ```
 
 ## license
