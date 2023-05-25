@@ -1,27 +1,70 @@
 {
-  "name": "@jswork/boilerplate-gulp-plugin",
+  "name": "@jswork/next-uniapp-kits",
   "version": "1.0.0",
-  "description": "boilerplate-gulp-plugin-description",
+  "description": "Uniapp kits based on next.",
   "homepage": "https://js.work",
   "author": {
-    "name": "afeiship",
+    "name": "afei",
     "email": "1290657123@qq.com"
   },
   "scripts": {
-    "test": "mocha __tests__/test.js"
+    "build": "gulp",
+    "test": "jest",
+    "start": "node ./express.js",
+    "release": "release-it"
   },
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "license": "MIT",
   "devDependencies": {
-    "assert": "^2.0.0",
-    "event-stream": "^4.0.1",
-    "gulp-util": "^3.0.8",
-    "mocha": "^6.2.2",
-    "through2": "^3.0.1"
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@jswork/gulp-pkg-header": "^1.0.8",
+    "@jswork/gulp-registry": "^1.0.22",
+    "@jswork/next": "^1.1.8",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-prettier": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^29.5.0",
+    "jest-location-mock": "^1.0.9",
+    "uglify-save-license": "^0.4.1"
   },
-  "boilerplate": "boilerplate-gulp-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/afeiship/boilerplate-gulp-plugin.git"
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@jswork/event-mitt": "^1.0.3",
+    "@jswork/next-capitalize": "^1.0.1",
+    "@jswork/next-classify": "^1.0.2",
+    "@jswork/next-compact-object": "^1.0.3",
+    "@jswork/next-deep-assign": "^1.0.3",
+    "@jswork/next-deep-clone": "^1.0.2",
+    "@jswork/next-deep-each": "^1.0.2",
+    "@jswork/next-deep-equal": "^1.0.3",
+    "@jswork/next-empty": "^1.0.1",
+    "@jswork/next-get2get": "^1.0.3",
+    "@jswork/next-global": "^1.0.2",
+    "@jswork/next-is-empty-object": "^1.0.3",
+    "@jswork/next-is-plain-object": "^1.0.3",
+    "@jswork/next-json": "^1.0.5",
+    "@jswork/next-kebab-case": "^1.0.3",
+    "@jswork/next-key-map": "^1.0.5",
+    "@jswork/next-param": "^1.0.12",
+    "@jswork/next-qs": "^1.0.7",
+    "@jswork/next-sets": "^1.0.3",
+    "@jswork/next-weapp-storage": "^1.0.4",
+    "@jswork/vite-envs": "^1.0.6"
   }
 }
