@@ -37,6 +37,8 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       this.options = nx.mix(null, defaults, inOptions);
       this.initLocal();
       this.initEvent();
+      this.initEnvs();
+      this.initGlobal();
     },
     initLocal: function () {
       const { prefix } = this.options;
