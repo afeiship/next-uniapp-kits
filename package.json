@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-uniapp-kits",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uniapp kits based on next.",
   "homepage": "https://js.work",
   "author": {
@@ -48,7 +48,7 @@
     "@jswork/event-mitt": "^1.0.3",
     "@jswork/next-capitalize": "^1.0.2",
     "@jswork/next-classify": "^1.0.5",
-    "@jswork/next-compact-object": "^1.0.3",
+    "@jswork/next-compact-object": "^1.0.4",
     "@jswork/next-deep-assign": "^1.0.4",
     "@jswork/next-deep-clone": "^1.0.3",
     "@jswork/next-deep-each": "^1.0.3",
@@ -60,7 +60,7 @@
     "@jswork/next-is-plain-object": "^1.0.4",
     "@jswork/next-json": "^1.0.5",
     "@jswork/next-kebab-case": "^1.0.4",
-    "@jswork/next-key-map": "^1.0.5",
+    "@jswork/next-key-map": "^1.0.8",
     "@jswork/next-param": "^1.0.12",
     "@jswork/next-qs": "^1.0.9",
     "@jswork/next-sets": "^1.0.4",
