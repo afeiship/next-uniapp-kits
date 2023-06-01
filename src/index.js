@@ -4,6 +4,7 @@ import ViteEnvs from '@jswork/vite-envs';
 
 // classes
 import '@jswork/next-weapp-storage';
+import '@jswork/next-date';
 
 // packages
 import '@jswork/next-capitalize';
