@@ -30,6 +30,10 @@ const defaults = { prefix: 'nuk', initialData: null };
 
 const NxUniappKits = nx.declare('nx.UniappKits', {
   statics: {
+    init: function () {
+      nx.sets({ $env: ViteEnvs.get });
+      nx.sets({ $event: nx.mix(null, EventMitt) });
+    },
     create: function (inOptions) {
       return new this(inOptions);
     }
@@ -38,19 +42,11 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
     init: function (inOptions) {
       this.options = nx.mix(null, defaults, inOptions);
       this.initLocal();
-      this.initEvent();
-      this.initEnvs();
       this.initGlobal();
     },
     initLocal: function () {
       const { prefix } = this.options;
       nx.sets({ $local: new nx.WeappStorage(prefix) });
-    },
-    initEvent: function () {
-      nx.sets({ $event: nx.mix(null, EventMitt) });
-    },
-    initEnvs: function () {
-      nx.sets({ $env: ViteEnvs.get });
     },
     initGlobal: function () {
       const { initialData } = this.options;
