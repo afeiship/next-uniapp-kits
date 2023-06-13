@@ -34,7 +34,7 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       nx.sets({ $env: ViteEnvs.get });
       nx.sets({ $event: nx.mix(null, EventMitt) });
       nx.sets({
-        $opts: function (inKey) {
+        $options: function (inKey) {
           const res = wx.getEnterOptionsSync();
           return inKey ? nx.get(res, inKey) : res;
         }
