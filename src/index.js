@@ -35,8 +35,10 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       nx.sets({ $event: nx.mix(null, EventMitt) });
       nx.sets({
         $options: function (inKey) {
-          const res = wx.getEnterOptionsSync();
-          return inKey ? nx.get(res, inKey) : res;
+          const pages = getCurrentPages();
+          const current = pages[pages.length - 1];
+          const options = current.options;
+          return inKey ? nx.get(options, inKey) : options;
         }
       });
     },
