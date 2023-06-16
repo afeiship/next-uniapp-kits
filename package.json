@@ -20,7 +20,7 @@
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
     "@jswork/gulp-pkg-header": "^1.0.8",
-    "@jswork/gulp-registry": "^1.0.23",
+    "@jswork/gulp-registry": "^1.0.32",
     "@jswork/next": "^1.1.8",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -59,14 +59,14 @@
     "@jswork/next-global": "^1.0.3",
     "@jswork/next-is-empty-object": "^1.0.4",
     "@jswork/next-is-plain-object": "^1.0.4",
-    "@jswork/next-json": "^1.0.5",
+    "@jswork/next-json": "^1.0.6",
     "@jswork/next-kebab-case": "^1.0.4",
     "@jswork/next-key-map": "^1.0.8",
     "@jswork/next-param": "^1.0.12",
     "@jswork/next-qs": "^1.0.9",
     "@jswork/next-sets": "^1.0.4",
     "@jswork/next-weapp-storage": "^1.0.4",
-    "@jswork/vite-envs": "^1.0.8"
+    "@jswork/vite-envs": "^1.0.9"
   },
   "keywords": [
     "bootstrap",
