@@ -38,7 +38,8 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
           const pages = getCurrentPages();
           const page = pages[pages.length - 1];
           const { options, route, $page } = page;
-          const meta = { route, options, url: $page.fullPath };
+          const url = nx.get($page, 'fullPath');
+          const meta = { route, options, url };
           return nx.get(meta, inKey);
         }
       });
