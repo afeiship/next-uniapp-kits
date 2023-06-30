@@ -27,7 +27,7 @@ import '@jswork/next-sets';
 import '@jswork/next-json';
 import '@jswork/next-global';
 
-const defaults = { prefix: 'nuk', queryTransform: [nx.stubValue], initialData: null };
+const defaults = { prefix: 'nuk', optionsInterceptors: [nx.stubValue], initialData: null };
 
 const NxUniappKits = nx.declare('nx.UniappKits', {
   statics: {
@@ -55,13 +55,13 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       nx.sets({ $global: nx.global(initialData) });
     },
     initPage: function () {
-      const { queryTransform } = this.options;
+      const { optionsInterceptors } = this.options;
       nx.sets({
         $page: function (inKey) {
           const pages = getCurrentPages();
           const page = pages[pages.length - 1];
           const { options: opts, route, $page } = page;
-          const options = pipe(...queryTransform)(opts);
+          const options = pipe(...optionsInterceptors)(opts);
           const url = nx.get($page, 'fullPath');
           const meta = { route, options, url };
           return nx.get(meta, inKey);
