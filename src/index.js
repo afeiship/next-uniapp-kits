@@ -1,6 +1,7 @@
 import nx from '@jswork/next';
 import EventMitt from '@jswork/event-mitt';
 import ViteEnvs from '@jswork/vite-envs';
+import pipe from '@jswork/pipe';
 
 // classes
 import '@jswork/next-weapp-storage';
@@ -26,23 +27,13 @@ import '@jswork/next-sets';
 import '@jswork/next-json';
 import '@jswork/next-global';
 
-const defaults = { prefix: 'nuk', initialData: null };
+const defaults = { prefix: 'nuk', queryTransform: [nx.stubValue], initialData: null };
 
 const NxUniappKits = nx.declare('nx.UniappKits', {
   statics: {
     init: function () {
       nx.sets({ $env: ViteEnvs.get });
       nx.sets({ $event: nx.mix(null, EventMitt) });
-      nx.sets({
-        $page: function (inKey) {
-          const pages = getCurrentPages();
-          const page = pages[pages.length - 1];
-          const { options, route, $page } = page;
-          const url = nx.get($page, 'fullPath');
-          const meta = { route, options, url };
-          return nx.get(meta, inKey);
-        }
-      });
     },
     create: function (inOptions) {
       return new this(inOptions);
@@ -53,6 +44,7 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       this.options = nx.mix(null, defaults, inOptions);
       this.initLocal();
       this.initGlobal();
+      this.initPage();
     },
     initLocal: function () {
       const { prefix } = this.options;
@@ -61,6 +53,20 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
     initGlobal: function () {
       const { initialData } = this.options;
       nx.sets({ $global: nx.global(initialData) });
+    },
+    initPage: function () {
+      const { queryTransform } = this.options;
+      nx.sets({
+        $page: function (inKey) {
+          const pages = getCurrentPages();
+          const page = pages[pages.length - 1];
+          const { options: opts, route, $page } = page;
+          const options = pipe(...queryTransform)(opts);
+          const url = nx.get($page, 'fullPath');
+          const meta = { route, options, url };
+          return nx.get(meta, inKey);
+        }
+      });
     }
   }
 });

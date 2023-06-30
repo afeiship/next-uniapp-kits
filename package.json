@@ -67,6 +67,7 @@
     "@jswork/next-qs": "^1.0.9",
     "@jswork/next-sets": "^1.0.4",
     "@jswork/next-weapp-storage": "^1.0.5",
+    "@jswork/pipe": "^1.0.3",
     "@jswork/vite-envs": "^1.0.9"
   },
   "keywords": [
