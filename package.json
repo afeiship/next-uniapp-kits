@@ -64,6 +64,7 @@
     "@jswork/next-json": "^1.0.6",
     "@jswork/next-kebab-case": "^1.0.4",
     "@jswork/next-key-map": "^1.0.8",
+    "@jswork/next-memo": "^1.0.1",
     "@jswork/next-param": "^1.0.12",
     "@jswork/next-qs": "^1.0.9",
     "@jswork/next-sets": "^1.0.4",

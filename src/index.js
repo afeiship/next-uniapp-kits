@@ -28,6 +28,7 @@ import '@jswork/next-qs';
 import '@jswork/next-sets';
 import '@jswork/next-json';
 import '@jswork/next-global';
+import '@jswork/next-memo';
 
 const defaults = { prefix: 'nuk', queryInterceptors: [nx.stubValue], initialData: null };
 
