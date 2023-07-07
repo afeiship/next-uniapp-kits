@@ -9,7 +9,9 @@ import '@jswork/next-date';
 
 // packages
 import '@jswork/next-capitalize';
+import '@jswork/next-camelize';
 import '@jswork/next-classify';
+import '@jswork/next-try-set';
 import '@jswork/next-compact-object';
 import '@jswork/next-deep-assign';
 import '@jswork/next-deep-clone';
