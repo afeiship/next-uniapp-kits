@@ -26,6 +26,7 @@ import '@jswork/next-key-map';
 import '@jswork/next-param';
 import '@jswork/next-qs';
 import '@jswork/next-sets';
+import '@jswork/next-sleep';
 import '@jswork/next-json';
 import '@jswork/next-global';
 import '@jswork/next-memo';
