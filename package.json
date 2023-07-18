@@ -56,7 +56,7 @@
     "@jswork/next-deep-each": "^1.0.3",
     "@jswork/next-deep-equal": "^1.0.4",
     "@jswork/next-empty": "^1.0.2",
-    "@jswork/next-get2get": "^1.0.4",
+    "@jswork/next-get2get": "^1.0.5",
     "@jswork/next-global": "^1.0.3",
     "@jswork/next-group-by": "^1.0.2",
     "@jswork/next-is-empty-object": "^1.0.4",
