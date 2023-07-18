@@ -65,7 +65,7 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
           const pages = getCurrentPages();
           const page = pages[pages.length - 1];
           const { options: opts, route, $page } = page;
-          const options = pipe(...queryInterceptors)(opts);
+          const options = pipe(...queryInterceptors)({ options: opts, route });
           const url = nx.get($page, 'fullPath');
           const meta = { route, options, url };
           return nx.get(meta, inKey);
