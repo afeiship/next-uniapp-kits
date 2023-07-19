@@ -31,7 +31,7 @@ import '@jswork/next-json';
 import '@jswork/next-global';
 import '@jswork/next-memo';
 
-const defaults = { prefix: 'nuk', queryInterceptors: [nx.stubValue], initialData: null };
+const defaults = { prefix: 'nuk', interceptors: [nx.stubValue], initialData: null };
 
 const NxUniappKits = nx.declare('nx.UniappKits', {
   statics: {
@@ -59,13 +59,13 @@ const NxUniappKits = nx.declare('nx.UniappKits', {
       nx.sets({ $global: nx.global(initialData) });
     },
     initPage: function () {
-      const { queryInterceptors } = this.options;
+      const { interceptors } = this.options;
       nx.sets({
         $page: function (inKey) {
           const pages = getCurrentPages();
           const page = pages[pages.length - 1];
           const { options: opts, route, $page } = page;
-          const options = pipe(...queryInterceptors)(opts);
+          const { options } = pipe(...interceptors)({ options: opts, route });
           const url = nx.get($page, 'fullPath');
           const meta = { route, options, url };
           return nx.get(meta, inKey);
