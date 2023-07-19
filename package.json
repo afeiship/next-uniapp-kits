@@ -11,6 +11,7 @@
     "build": "gulp",
     "test": "jest",
     "start": "node ./express.js",
+    "changeset": "changeset",
     "release": "release-it"
   },
   "main": "dist/index.js",
