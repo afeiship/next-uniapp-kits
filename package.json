@@ -48,11 +48,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@jswork/event-mitt": "^1.0.10",
-=======
-    "@jswork/event-mitt": "^1.0.7",
->>>>>>> f32b97b424d3dc32da12a940f4ea1c0b272ec1e9
     "@jswork/next-camelize": "^1.0.3",
     "@jswork/next-capitalize": "^1.0.2",
     "@jswork/next-classify": "^1.0.5",
